@@ -1,0 +1,149 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid black; */
+   
+    margin: 2em;
+}
+
+
+
+.car {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    /* justify-content: space-around; */
+    align-items: flex-start;
+    height: 26em;
+    /* border-bottom: 1px solid black; */
+    /* border: 1px solid black; */
+    padding: 2em;
+}
+
+.car img,
+h2,
+p,
+button {
+    margin-top: 10px;
+}
+
+.car h2 {
+    font-family: 'Big Shoulders Display';
+    color: #fff;
+}
+
+.car p, button {
+    font-family: 'Lexend Deca';
+}
+
+.car p {
+    color: rgb(206, 201, 201) ;
+    line-height: 2rem;
+}
+
+.car button {
+    display: inline-block;
+    width: 8em;
+    height: 3em;
+    border-radius: 2em;
+    
+}
+
+.sedan {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.sedan button {
+    color: var(--bright-orange);
+    border: 1px solid var(--bright-orange);
+}
+
+.suv {
+    background-color: var(--dark-cyan);
+}
+
+.suv button {
+    color: var(--dark-cyan);
+    border: 1px solid var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+.luxury button {
+    color: var(--very-dark-cyan);
+    border: 1px solid var(--very-dark-cyan);
+}
+
+footer {
+    display: flex;
+    width: 100%;
+   justify-content: center;
+    
+}
+
+footer p {
+   font-family: 'Lexend Deca';
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+/* .sedan > h2::before {
+    content: url(images/icon-sedans.svg);
+} */
+
+
+
+/* for dekstop */
+@media (min-width: 800px) {
+    .container {
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .car {
+        width: 25%;
+    }
+
+    .car img {
+        margin-top: 0px;
+    }
+
+    .car button {
+        margin-top: 4em;
+    }
+
+    .sedan {
+        border-top-right-radius: 0;
+    }
+
+    .luxury {
+        border-top-right-radius: 20px;
+
+    }
+}
